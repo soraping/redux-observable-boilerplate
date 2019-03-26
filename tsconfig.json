@@ -1,0 +1,29 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "sourceMap": false,
+    "preserveConstEnums": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": true,
+    "importHelpers": true,
+    "declaration": true,
+    "rootDir": ".",
+    "outDir": "./build",
+    "baseUrl": "./src",
+    "paths": {
+      "@actions": ["actions"],
+      "@utils": ["utils"],
+      "@constants": ["constants"],
+      "@model": ["model"]
+    },
+    "lib": ["es6", "dom", "es7"]
+  },
+  "exclude": ["node_modules", "build", "test"],
+  "include": ["./typings", "./src/**/*.ts"]
+}
