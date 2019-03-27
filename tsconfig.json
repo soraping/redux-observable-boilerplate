@@ -1,8 +1,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
+    "module": "esnext",
+    "target": "es6",
     "jsx": "react",
     "moduleResolution": "node",
     "noImplicitAny": false,
@@ -10,6 +10,7 @@
     "preserveConstEnums": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "esModuleInterop": true,
     "removeComments": true,
     "importHelpers": true,
     "declaration": true,

@@ -1,15 +1,13 @@
 import React from "react";
 import { Route, Switch } from "react-router";
+import { History } from "history";
 import Loadable from "react-loadable";
 import Loading from "./components/loading";
-import NoMatch from "./components/404";
 
 interface IRoute {
   title: string;
-  path: string;
-  component: () => Promise<
-    React.ComponentType<any> | { default: React.ComponentType<any> }
-  >;
+  path?: string;
+  component: () => any;
 }
 
 let routes: IRoute[] = [
@@ -22,12 +20,17 @@ let routes: IRoute[] = [
     title: "个人中心",
     path: "/user",
     component: () => import("./components/user")
+  },
+  {
+    title: "404",
+    component: () => import("./components/404")
   }
 ];
 
-let mainViewsJSX = routes.map(item => {
+let mainViewsJSX = routes.map((item, index) => {
   return (
     <Route
+      key={index}
       exact
       path={item.path}
       component={Loadable({
@@ -40,9 +43,6 @@ let mainViewsJSX = routes.map(item => {
 
 export default (
   <div>
-    <Switch>
-      {mainViewsJSX}
-      <Route component={NoMatch} />
-    </Switch>
+    <Switch>{mainViewsJSX}</Switch>
   </div>
 );

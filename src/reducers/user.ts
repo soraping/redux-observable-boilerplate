@@ -5,10 +5,12 @@ type UserAction = ActionType<typeof userActions>;
 
 export interface IUserState {
   name: string;
+  avatar_url: string;
 }
 
 const initialState = {
-  name: ""
+  name: "",
+  avatar_url: ""
 };
 
 export default function userReducer(
@@ -19,7 +21,8 @@ export default function userReducer(
     case getType(userActions.setUserInfo):
       return {
         ...state,
-        ...action["payload"]
+        name: action["payload"]["name"],
+        avatar_url: action["payload"]["avatar_url"]
       };
     default:
       return state;
