@@ -4,13 +4,13 @@ import { bindActionCreators } from "redux";
 import { userActions } from "../actions";
 import { IState } from "../reducers";
 
-type PageStateProps = {};
+type PageStateProps = Pick<IState, "user">;
 
 type PageDispatchProps = {
   getGitHubUser: () => void;
 };
 
-type PageOwnProps = Pick<IState, "user">;
+type PageOwnProps = {};
 
 type PageState = {};
 

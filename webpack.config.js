@@ -33,7 +33,8 @@ module.exports = {
     alias: {
       "@actions": path.resolve(__dirname, "src", "actions"),
       "@utils": path.resolve(__dirname, "src", "utils"),
-      "@constants": path.resolve(__dirname, "src", "constants")
+      "@constants": path.resolve(__dirname, "src", "constants"),
+      "@reducers": path.resolve(__dirname, "src", "reducers")
     },
     modules: ["node_modules"]
   },

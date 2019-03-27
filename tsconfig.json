@@ -21,7 +21,7 @@
       "@actions": ["actions"],
       "@utils": ["utils"],
       "@constants": ["constants"],
-      "@model": ["model"]
+      "@reducers": ["reducers"]
     },
     "lib": ["es6", "dom", "es7"]
   },
