@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { userActions } from "../actions";
-import { IState } from "../reducers";
+import { userActions } from "@actions";
+import { IState } from "@reducers";
 
 type PageStateProps = Pick<IState, "user">;
 
@@ -38,7 +38,7 @@ const mapDispatchToProps = dispatch => {
   mapStateToProps,
   mapDispatchToProps
 ) as any)
-export default class User extends Component<IProps, any> {
+export default class User extends Component<IProps, PageState> {
   render() {
     let { user } = this.props;
     return (

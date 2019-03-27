@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Switch } from "react-router";
-import { History } from "history";
 import Loadable from "react-loadable";
 import Loading from "./components/loading";
 

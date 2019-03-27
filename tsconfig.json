@@ -1,8 +1,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "module": "esnext",
-    "target": "es6",
+    "module": "commonjs",
+    "target": "es2017",
     "jsx": "react",
     "moduleResolution": "node",
     "noImplicitAny": false,
@@ -14,6 +14,9 @@
     "removeComments": true,
     "importHelpers": true,
     "declaration": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "rootDir": ".",
     "outDir": "./build",
     "baseUrl": "./src",
@@ -26,5 +29,10 @@
     "lib": ["es6", "dom", "es7"]
   },
   "exclude": ["node_modules", "build", "test"],
-  "include": ["./typings", "./src/**/*.ts"]
+  "include": [
+    "./typings",
+    "./src/**/*.ts",
+    "src/components/user.tsx",
+    "src/index.tsx"
+  ]
 }
