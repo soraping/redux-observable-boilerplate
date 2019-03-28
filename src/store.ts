@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware, Store } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import { createEpicMiddleware } from "redux-observable";
 import { composeWithDevTools } from "redux-devtools-extension";
 import { routerMiddleware } from "connected-react-router";
@@ -22,4 +22,5 @@ export default createStore(
   composeWithDevTools(applyMiddleware(...middlewares))
 );
 
+// run 方法一定要在 createStore 方法之后
 epicMiddleware.run(rootEpic);
