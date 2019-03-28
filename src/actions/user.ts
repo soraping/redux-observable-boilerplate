@@ -1,5 +1,7 @@
 import { USER } from "@constants";
-import { createAction } from "typesafe-actions";
+import { createAction, ActionType } from "typesafe-actions";
+
+export type UserAction = ActionType<typeof userActions>;
 
 export namespace userActions {
   export const getGitHubUser = createAction(USER.GITHUB_USER_API);

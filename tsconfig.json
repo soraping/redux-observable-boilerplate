@@ -29,10 +29,5 @@
     "lib": ["es6", "dom", "es7"]
   },
   "exclude": ["node_modules", "build", "test"],
-  "include": [
-    "./typings",
-    "./src/**/*.ts",
-    "src/components/user.tsx",
-    "src/index.tsx"
-  ]
+  "include": ["./typings", "./src/**/*.*"]
 }

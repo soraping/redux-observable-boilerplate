@@ -1,7 +1,5 @@
-import { ActionType, getType } from "typesafe-actions";
-import { userActions } from "@actions";
-
-type UserAction = ActionType<typeof userActions>;
+import { getType } from "typesafe-actions";
+import { userActions, UserAction, IBaseAction } from "@actions";
 
 export interface IUserState {
   name: string;
@@ -19,10 +17,13 @@ export default function userReducer(
 ): IUserState {
   switch (action.type) {
     case getType(userActions.setUserInfo):
+      let {
+        payload: { name, avatar_url }
+      } = action as IBaseAction<IUserState>;
       return {
         ...state,
-        name: action["payload"]["name"],
-        avatar_url: action["payload"]["avatar_url"]
+        name,
+        avatar_url
       };
     default:
       return state;

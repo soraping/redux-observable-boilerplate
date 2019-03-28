@@ -1,11 +1,14 @@
 import { combineReducers } from "redux";
 import { History } from "history";
 import { RouterState, connectRouter } from "connected-react-router";
-import userReducer, { IUserState } from "./user";
+import { StateType } from "typesafe-actions";
+import userReducer from "./user";
+
+export type UserState = StateType<typeof userReducer>;
 
 export interface IState {
   router: RouterState;
-  user: IUserState;
+  user: UserState;
   [P: string]: any;
 }
 
