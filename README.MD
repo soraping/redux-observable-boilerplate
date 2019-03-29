@@ -17,7 +17,7 @@
 
 **这个就是一个典型的函数式编程的案例，巧用了闭包，让 `dispatch` 方法在函子内没有被销毁。 **
 
-[`redux-thunk` 及其 `applyMiddleware` 源码解读](https://github.com/soraping/redux-source/blob/master/doc/applyMiddleware.md)
+[`redux-thunk` 及其 `applyMiddleware` 源码解读](https://github.com/soraping/any-source/blob/master/doc/redux/applyMiddleware.md)
 
 ![redux-thunk 流程](https://ws1.sinaimg.cn/large/e221b779gy1g1ih6vf5auj212a0dm762.jpg)
 
@@ -224,7 +224,7 @@ yarn && yarn start
 
 大牛的作品，闭包用的炉火纯青，各种高阶函数，精妙绝伦的操作大大降低了代码量，更能看到函数式编程的妙处。
 
-[`redux`源码阅读参考](https://github.com/soraping/redux-source)
+[`redux`源码阅读参考](https://github.com/soraping/any-source)
 
 > `rxjs` 及其操作符
 
