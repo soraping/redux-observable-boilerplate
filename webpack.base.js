@@ -25,22 +25,22 @@ module.exports = {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "happypack/loader?id=happytsxloader"
+          loader: "babel-loader"
         }
       }
     ]
   },
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx", ".scss", ".json", ".css"],
+    extensions: [".ts", ".tsx", ".less", ".json", ".css", ".js", ".jsx"],
     alias: buildAlias(tsconfigJSON),
     modules: ["node_modules"]
   },
   plugins: [
     new HappyPack({
-      id: "happytsxloader",
+      id: "jsloader",
       loaders: [
         {
-          path: "ts-loader",
+          path: "babel-loader",
           query: { happyPackMode: true }
         }
       ],
